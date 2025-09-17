@@ -1,0 +1,654 @@
+@font-face {
+    font-family: 'Bloombang';
+    src: url('../fonts/bloombang.regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+#wrapper{
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:  "header nav"
+                          "main main"
+                          "footer footer";
+    row-gap: 70px;
+}
+#background{
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+#mobilebackground{
+    display: none;
+}
+#membercover{
+    object-fit: cover;
+    position: fixed;
+    min-width: 100%;
+    z-index: -1;
+    opacity: 80%;
+}
+header{
+    grid-area: header;
+    text-align: left;
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1800;
+    font-style: normal;
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+header h1{
+    padding-left: 10px;
+    margin-top: 40px;
+    font-size: 3em;
+    animation: float 2s ease-in-out infinite;
+    color: black;
+    text-shadow: 0 0 8px deepskyblue, 0 0 16px #00f7ff;
+}
+nav{
+    grid-area: nav;
+}
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    font-family: "Rubik Bubbles", system-ui;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3em;
+}
+#hamburger{
+    display: none;
+}
+nav ul a {
+    text-decoration: none;
+    color: white;
+}
+main{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:  minmax(900px) auto auto auto;
+    grid-template-areas: "intro"
+                         "members"
+                         "disco"
+                         "gallerys";
+    margin: 0 auto;
+    padding-top: 0;
+    width: 95%;
+   
+}
+.introduction{
+    grid-area: intro;
+    min-height: 60vh;
+    padding: 10%;
+    margin-top: 20%;
+}
+#smiley1{
+    display: none;
+}
+#smiley2{
+    display: none
+}
+.introduction p{
+    font-size: 2em;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+.introduction h2{
+    font-family: 'Segment', sans-serif;
+    font-weight: 800;
+    font-size: 9em;
+    color: red;
+    text-align: center;
+}
+.member-profile{
+    grid-area: members;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+.member{
+    padding: 2%;
+    width: 600px;
+    background-color: black;
+    color: whitesmoke;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+    transition: transform 0.2s ease;
+
+}
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.member img {
+    transition: transform 0.3s ease;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 20px;
+}
+
+.member :hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,255,255 ,1);
+    cursor: pointer;
+}
+.member h3{
+    font-size: 3rem;
+    margin: 10px 0 5px;
+}
+.member h4{
+    text-align: center;
+    font-size: 1.5em;
+    font-family: sans-serif;
+}
+.member p{
+    text-align: center;
+    font-family: sans-serif;
+}
+.discography{
+    grid-area: disco;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr ;
+    grid-template-areas: "balbum"
+                         "album";
+    background-color: rgba(230, 230, 250);
+}
+.albumback{
+    grid-area: balbum;
+    position: relative;
+}
+.albumback img{
+    width: 100%;
+}
+.albumback h2{
+    position: absolute;
+    left: 35%;
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1800;
+    font-size: 5em;
+    font-style: normal;
+    color: white;
+}
+.albums{
+    grid-area: album;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "area1"
+                         "area2"
+                         "area3"
+                         "area4";
+    row-gap: 50px;
+    margin: 2%;
+    padding: 2%;
+}
+#firstalbum{
+    grid-area: area1;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "firstaside firstlist"
+                         "firstaside firstbuttons";
+    border-bottom: solid floralwhite 5px;
+}
+.firstalbumaside{
+    grid-area: firstaside;
+    text-align: center;
+}
+.firstalbumlist1{
+    grid-area: firstlist;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:  center;
+    font-size: 2.5em;
+}
+.firstbuttons{
+    grid-area: firstbuttons;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.firstbuttons button{
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1800;
+    font-style: normal;
+    font-size: 1em;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.firstbuttons button:hover{
+    transform: translateY(-2px);
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
+    background: linear-gradient(145deg, #8b79ff, #6c63ff);
+}
+#secondalbum{
+    grid-area: area2;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "secondlist secondaside"
+                         "secondbuttons secondaside";
+    border-bottom: solid floralwhite 5px;
+}
+.secondalbumaside{
+    grid-area: secondaside;
+    text-align: center;
+}
+.secondalbumlist{
+    grid-area: secondlist;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 2em;
+}
+.secondbuttons{
+    grid-area: secondbuttons;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.secondbuttons button{
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1800;
+    font-style: normal;
+    font-size: 1em;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.secondbuttons button:hover{
+    transform: translateY(-2px);
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
+    background: linear-gradient(145deg, #8b79ff, #6c63ff);
+}
+#thirdalbum{
+    grid-area: area3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "thirdaside thirdlist"
+                         "thirdaside thirdbutton";
+    border-bottom: solid floralwhite 5px;
+}
+.thirdalbumaside{
+    grid-area: thirdaside;
+    text-align: center;
+}
+.thirdalbumlist{
+    grid-area: thirdlist;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2em;
+}
+.thirdbuttons{
+    grid-area: thirdbutton;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.thirdbuttons button{
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1800;
+    font-style: normal;
+    font-size: 1em;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.thirdbuttons button:hover{
+    transform: translateY(-2px);
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
+    background: linear-gradient(145deg, #8b79ff, #6c63ff);
+}
+#lastalbum{
+    grid-area: area4;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "lastlist lastaside"
+                         "lastbuttons lastaside";
+}
+.lastalbumaside{
+    grid-area: lastaside;
+    text-align: center;
+}
+.lastalbumlist{
+    grid-area: lastlist;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 2em;
+}
+.lastbuttons{
+    grid-area: lastbuttons;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.lastbuttons button{
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1800;
+    font-style: normal;
+    font-size: 1em;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.lastbuttons button:hover{
+        transform: translateY(-2px);
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
+        background: linear-gradient(145deg, #8b79ff, #6c63ff);
+}
+.gallery{
+    grid-area: gallerys;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "galleryh2 gallerysearch"
+                         "gallerymain gallerymain";
+}
+#searchbar{
+  grid-area: gallerysearch;
+  text-align: right;
+  margin-top: 11%;
+}
+#searchbar input{
+    height: 50px;
+    width: 30%;
+    background-color: black;
+}
+.galleraside{
+    grid-area: galleryh2;
+}
+.galleryaside h3{
+      font-family: "Rubik Bubbles", system-ui;
+      font-weight: 900;
+      color: firebrick;
+      font-size: 6rem;
+}
+#memberimg {
+    grid-area: gallerymain;
+    padding: 1%;
+    background-color: rgba(0,0,0, 0.6);
+    column-count: 3;
+}
+#memberimg figure{
+    break-inside: avoid;
+}
+#memberimg img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: filter 0.5s ease, transform 0.3s ease;
+}
+#memberimg figure:hover img{
+    filter: hue-rotate(90deg) saturate(0.2);
+    transform: scale(1.02);
+}
+footer{
+    grid-area: footer;
+    display: grid;
+    background-color: black;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "footer1 footer2 footer3"
+                         "copy copy copy";
+}
+.footer1{
+    grid-area: footer1;
+    margin-left: 1%;
+}
+.footer1 img{
+    height: 75px;
+    width: 75px;
+}
+.footer2{
+    grid-area: footer2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.footer2 a{
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+.footer3{
+    grid-area: footer3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.footer3 a{
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+#copyright{
+    grid-area: copy;
+    font-size: 1.3em;
+    border-top: 2px solid antiquewhite;
+    text-align: center;
+    color: white;
+}
+
+@media screen and (max-width:768px){
+    body{
+        margin: 0 auto;
+        padding: 0;     
+    }
+    #wrapper{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas: "mobilehead mobilenav "
+                             "mobilemain mobilemain"
+                             "mobilefooter mobilefooter";
+        }
+        #background{
+            display: none;
+        }
+        #mobilebackground{
+            display: block;
+            position: fixed;
+            min-width: 100%;
+            min-height: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            z-index: -1;
+        }
+        header{
+            grid-area: mobilehead;
+            font-family: 'Bloombang', sans-serif;
+            font-size: 1em;
+        }
+        header h1{
+            color: blue;
+            font-size: 3rem;
+            position: sticky;
+            top: 0;
+        }
+        nav{
+            grid-area: mobilenav;
+            display: flex;
+        }
+        nav ul {
+        position: sticky;
+        top: 0;
+        flex-direction: column;
+        font-size: 15px;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        text-align: left;
+        line-height: 2rem;
+        opacity: 0;
+        transform: translateY(-20px);
+        pointer-events: none;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    nav ul.show {    
+        line-height: 2rem;
+        opacity: 1;
+        transform: translateY(0);
+        text-align: left;
+        pointer-events: auto;
+    }
+    #hamburger{
+        display: block;
+        width: 55px;   
+        height: 55px;
+        margin-top: 30px;
+        color: whitesmoke;
+        background-color: black;
+        }
+    main{
+        grid-area: mobilemain;
+    }
+    .introduction{
+        display: grid;
+        grid-template-rows: 10% 90%;
+        grid-template-columns: auto auto;
+        grid-template-areas: "smile1 smile2"
+                             "smile3 smile3";
+    }
+    #smiley1{
+        display: block;
+        grid-area: smile1;
+        font-size: 2.5em;
+        color: black;
+        font-family: sans-serif;
+        font-style: bold;
+    }
+    #smiley2{
+        display: block;
+        grid-area: smile2;
+        font-size: 2.5em;
+        color: black;
+        font-family: sans-serif;
+        font-style: bold;
+    }
+    .introduction h2{
+        grid-area: smile3;
+        margin: 0 auto;
+        color: black;
+        border-bottom: 30px solid white;
+        border-radius: 0 0 200px 200px;
+    }
+    #introp{
+         display: none;
+    }
+    .member{
+        width: 95%;
+    }
+    .albumback img{
+        height: 100%;
+    }
+    .albumback h2{
+        left: 3%;
+    }
+    .albums{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: "mobile1st"
+                             "mobile2nd"
+                             "mobile3rd"
+                             "mobile4th";
+    }
+    #firstalbum{
+        grid-area: mobile1st;
+        display: flex;
+        flex-direction: column;
+    }
+    .firstalbumlist1{
+        flex-direction: column;
+    }
+    #secondalbum{
+        grid-area: mobile2nd;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .secondalbumlist{
+        flex-direction: column;
+    }
+    #thirdalbum{
+        grid-area: mobile3rd;
+        display: flex;
+        flex-direction: column;
+    }
+    .thirdalbumlist{
+        flex-direction: column;
+    }
+    #lastalbum{
+        grid-area: mobile4th;
+        display: flex;
+        flex-direction: column;
+    }
+    .lastalbumlist{
+        flex-direction: column;
+    }
+    .gallery{
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+        grid-template-areas: "gallerymobile"
+                             "gallerymobilemain";
+    }
+    #memberimg {
+        grid-area: gallerymobilemain;
+        column-count: 1;
+    }
+    #searchbar{
+        display: none;
+    }
+    .galleryaside{
+        grid-area: gallerymobile;
+    }
+    .galleryaside h3{
+        font-size: 5rem;
+        text-align: center;
+    }
+    footer{
+        grid-area: mobilefooter;   
+    }
+}

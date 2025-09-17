@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Discography Page </title>
+  <link href="../css/stylesheet.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=striper@400&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=segment@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<video autoplay muted loop id="background">
+  <source src="../videos/bubblegum.mp4" type="video/mp4">
+</video>
+<div id="wrapper">
+  <header>
+    <h1> NewJeans </h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="../index.html"> Home </a></li>
+      <li><a href="./member.html"> Members </a></li>
+      <li><a href="./discography.html"> Songs </a></li>
+      <li><a href="./albums.html"> Albums </a></li>
+    </ul>
+    <button id="hamburger"> &#9776; </button>
+  </nav>
+
+    <main>
+      <section class="discography">
+        <section class="albumback">
+          <h2> Discography </h2>
+          <picture>
+          <source class="mobiledisc" media="(max-width: 768px)" srcset="/images/discographymobile.jpg">
+          <img src="/images/newjeanss.webp" alt="njz album">
+          </picture>
+        </section>
+
+        <section class="albums">
+          <section id="firstalbum">
+            <aside class="firstalbumaside">
+              <h3> 1st EP – New Jeans (2022)</h3>
+              <p>Release Date: August 1, 2022 </p>
+              <p> Genre: Synth-pop, R&B </p>
+              <p> Did You Know?
+                “Attention” became a breakout hit and put NewJeans on the international map. </p>
+              <img src="../images/bunnies.jpg" alt="bunnies" >
+            </aside>
+            <section class="firstalbumlist1">
+            <article>
+              <h5> Attention </h5>
+              <audio class="firstsong" id="attention">
+                <source  src="../audios/attention.mp3" type="audio/mp4">
+              </audio>
+            </article>
+            <article>
+              <h5> Hype Boy </h5>
+              <audio class="firstsong" id="hypeboy">
+                <source  src="../audios/hypeboy.mp3" type="audio/mp4">
+              </audio>
+            </article>
+            <article>
+              <h5> Cookie </h5>
+              <audio class="firstsong" id="cookie">
+                <source  src="../audios/cookie.mp3" type="audio/mp4" >
+              </audio>
+            </article>
+            <article>
+              <h5> Hurt </h5>
+              <audio class="firstsong" id="hurt">
+                <source  src="../audios/hurt.mp3" type="audio/mp4" >
+              </audio>
+            </article>
+            </section>
+              <aside class="firstbuttons">
+                <button id="rewindbtn"> Rewind </button>
+                <button id="playbtn"> Play </button>
+                <button id="nextbtn"> Next </button>
+              </aside>
+          </section>
+
+          <section id="secondalbum">
+            <aside class="secondalbumaside">
+              <h3> OMG single album</h3>
+              <p> Release Date: January 2, 2023 </p>
+              <p> Genre: K-Pop, Pop, R&B </p>
+              <p> Did You Know?
+                Pre-release single “Ditto” dropped in December 2022, months before the album. </p>
+              <img src="../images/dittoalbum.webp" alt="albumcover">
+            </aside>
+            <section class="secondalbumlist">
+            <article>
+              <h5> OMG </h5>
+              <audio class="secondsong" id="omg">
+                <source src="../audios/omg.mp3" type="audio/mp4">
+              </audio>
+            </article>
+
+            <article>
+              <h5> Ditto </h5>
+              <audio class="secondsong" id="ditto">
+                <source src="../audios/ditto.mp3"  type="audio/mp4">
+              </audio>
+            </article>
+            </section>
+            <aside class="secondbuttons">
+              <button id="secondrewind"> Rewind </button>
+              <button id="secondplay"> Play </button>
+              <button id="secondnext"> Next </button>
+            </aside>
+          </section>
+
+          <section id="thirdalbum">
+            <aside class="thirdalbumaside">
+              <h3> Get Up! NewJeans 2nd EP</h3>
+              <p> Genre: Pop, R&B </p>
+              <p> Release Date: July 21, 2023 </p>
+              <p> Did You Know?
+                The EP debuted at number one on the US Billboard 200. </p>
+              <img src="../images/getupcover.webp" alt="getupcover">
+            </aside>
+            <section class="thirdalbumlist">
+            <article>
+              <h5> Super Shy </h5>
+              <audio class="thirdsong" id="supershy">
+                <source src="../audios/supershy.mp3" type="audio/mp4">
+              </audio>
+            </article>
+
+            <article>
+              <h5> ETA </h5>
+              <audio class="thirdsong" id="eta">
+                <source src="../audios/eta.mp3" type="audio/mp4">
+              </audio>
+            </article>
+
+            <article>
+              <h5> New Jeans </h5>
+              <audio class="thirdsong" id="newjeans">
+                <source src="../audios/new%20jeans.mp3" type="audio/mp4">
+              </audio>
+            </article>
+
+            <article>
+              <h5> Cool With You </h5>
+              <audio class="thirdsong" id="coolwithyou">
+                <source src="../audios/coolwithyou.mp3" type="audio/mp4">
+              </audio>
+            </article>
+
+            <article>
+              <h5> Get Up </h5>
+              <audio class="thirdsong" id="getup">
+                <source src="../audios/getup.mp3" type="audio/mp4">
+              </audio>
+            </article>
+
+            <article>
+              <h5> ASAP </h5>
+              <audio class="thirdsong" id="asap">
+                <source src="../audios/asap.mp3" type="audio/mp4">
+              </audio>
+            </article>
+            </section>
+            <aside class="thirdbuttons">
+              <button id="thirdrewind"> Rewind </button>
+              <button id="thirdplay"> Play </button>
+              <button id="thirdnext"> Next </button>
+            </aside>
+          </section>
+
+          <section id="lastalbum">
+            <aside class="lastalbumaside">
+              <h3> Supernatural And How Sweet Albums</h3>
+              <p> Genre: Pop & Electronic Dance with influence of RNB</p>
+              <p> Release Date: May 24, 2024 </p>
+              <p> Did You Know?
+                The title track “How Sweet” blends Miami bass, electropop, and electroclash, giving it a fresh, danceable sound that stands out in K-pop.</p>
+              <img src="../images/supernaturalcover.webp" alt="supernatural cover photo">
+            </aside>
+            <section class="lastalbumlist">
+            <article>
+              <h5> How Sweet </h5>
+              <audio class="lastsong" id="howsweet">
+                <source src="../audios/howsweet.mp3" type="audio/mp4">
+              </audio>
+            </article>
+            <article>
+              <h5> Supernatural </h5>
+              <audio class="lastsong" id="supernatural">
+                <source src="../audios/supernatural.mp3" type="audio/mp4">
+              </audio>
+            </article>
+            <article>
+              <h5> Right Now </h5>
+              <audio class="lastsong" id="rightnow">
+                <source src="audios/rightnow.mp3" type="audio/mp4">
+              </audio>
+            </article>
+            </section>
+              <aside class="lastbuttons">
+                <button id="lastrewind"> Rewind </button>
+                <button id="lastplay"> Play </button>
+                <button id="lastnext"> Next </button>
+              </aside>
+          </section>
+
+        </section>
+      </section>
+    </main>
+  <footer>
+    <section class="footer1">
+      <img src="../images/bunny.jpg" alt="footer logo">
+    </section>
+    <section class="footer2">
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="./albums.html">Albums</a>
+        <a href="./member.html">Members</a>
+        <a href="./discography.html"> Discography</a>
+      </nav>
+    </section>
+    <section class="footer3">
+      <a href="https://www.facebook.com/official.newjeans" class="fa fa-facebook"></a>
+      <a href="https://open.spotify.com/artist/6HvZYsbFfjnjFrWF950C9d?si=uyS5IuxIT023ybMhxSDglQ" class="fa fa-spotify"></a>
+      <a href="https://www.youtube.com/channel/UCMki_UkHb4qSc0qyEcOHHJw" class="fa fa-youtube"></a>
+      <a href="https://www.instagram.com/newjeans_official/" class="fa fa-instagram"></a>
+    </section>
+    <section id="copyright">
+      <p> &copy; Made by Vincent Gasatan 2025, All rights reserved </p>
+    </section>
+
+  </footer>
+</div>
+
+
+</body>
+<script src="../js/index.js"></script>
+</html>
