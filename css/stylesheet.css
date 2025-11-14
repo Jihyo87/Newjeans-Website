@@ -79,7 +79,7 @@ main{
     grid-area: main;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows:  minmax(900px) auto auto auto;
+    grid-template-rows:  minmax(200px) auto auto auto;
     grid-template-areas: "intro"
                          "members"
                          "disco"
@@ -91,9 +91,7 @@ main{
 }
 .introduction{
     grid-area: intro;
-    min-height: 60vh;
-    padding: 10%;
-    margin-top: 20%;
+    min-height: 70vh;
 }
 #smiley1{
     display: none;
@@ -104,6 +102,7 @@ main{
 .introduction p{
     font-size: 2em;
     margin: 0 auto;
+    padding: 10%;
     font-family: sans-serif;
 }
 .introduction h2{
@@ -123,7 +122,8 @@ main{
 }
 .member{
     padding: 2%;
-    width: 600px;
+    max-width: 1000px;
+    width: 95%;
     background-color: black;
     color: whitesmoke;
     opacity: 0;
@@ -216,6 +216,7 @@ main{
 .firstalbumaside{
     grid-area: firstaside;
     text-align: center;
+    font-size: 1.5em;
 }
 .firstalbumlist1{
     grid-area: firstlist;
@@ -223,7 +224,7 @@ main{
     flex-direction: row;
     justify-content: space-between;
     align-items:  center;
-    font-size: 2.5em;
+    font-size: 3em;
 }
 .firstbuttons{
     grid-area: firstbuttons;
@@ -258,6 +259,7 @@ main{
 .secondalbumaside{
     grid-area: secondaside;
     text-align: center;
+    font-size: 1.5em;
 }
 .secondalbumlist{
     grid-area: secondlist;
@@ -265,7 +267,7 @@ main{
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    font-size: 2em;
+    font-size: 3em;
 }
 .secondbuttons{
     grid-area: secondbuttons;
@@ -300,6 +302,7 @@ main{
 .thirdalbumaside{
     grid-area: thirdaside;
     text-align: center;
+    font-size: 1.5em;
 }
 .thirdalbumlist{
     grid-area: thirdlist;
@@ -307,7 +310,7 @@ main{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    font-size: 2em;
+    font-size: 3em;
 }
 .thirdbuttons{
     grid-area: thirdbutton;
@@ -341,6 +344,7 @@ main{
 .lastalbumaside{
     grid-area: lastaside;
     text-align: center;
+    font-size: 1.5em;
 }
 .lastalbumlist{
     grid-area: lastlist;
@@ -348,7 +352,7 @@ main{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    font-size: 2em;
+    font-size: 3em;
 }
 .lastbuttons{
     grid-area: lastbuttons;
@@ -387,7 +391,8 @@ main{
 #searchbar input{
     height: 50px;
     width: 30%;
-    background-color: black;
+    font-size: 2em;
+    background-color: white;
 }
 .galleraside{
     grid-area: galleryh2;
@@ -403,6 +408,7 @@ main{
     padding: 1%;
     background-color: rgba(0,0,0, 0.6);
     column-count: 3;
+     min-height: 100vh;
 }
 #memberimg figure{
     break-inside: avoid;
@@ -487,12 +493,11 @@ footer{
         #mobilebackground{
             display: block;
             position: fixed;
-            min-width: 100%;
-            min-height: 100%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            object-fit: cover;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
             z-index: -1;
         }
         header{
@@ -549,6 +554,7 @@ footer{
         grid-template-columns: auto auto;
         grid-template-areas: "smile1 smile2"
                              "smile3 smile3";
+        min-height: 100vh;
     }
     #smiley1{
         display: block;
@@ -565,6 +571,7 @@ footer{
         color: black;
         font-family: sans-serif;
         font-style: bold;
+        
     }
     .introduction h2{
         grid-area: smile3;
@@ -629,17 +636,22 @@ footer{
     }
     .gallery{
         display: grid;
-        grid-template-rows: auto auto;
-        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1fr ;
         grid-template-areas: "gallerymobile"
-                             "gallerymobilemain";
+                             "gallerysearch"
+                             "gallerymobilemain" ;
     }
     #memberimg {
         grid-area: gallerymobilemain;
         column-count: 1;
     }
     #searchbar{
-        display: none;
+        grid-area: gallerysearch;
+        text-align: center;
+    }
+    #searchbar input{
+        width: 100%;
     }
     .galleryaside{
         grid-area: gallerymobile;
@@ -649,6 +661,10 @@ footer{
         text-align: center;
     }
     footer{
-        grid-area: mobilefooter;   
+        grid-area: mobilefooter;
+        margin-top: 11%;
+    }
+    .footer1 img {
+        height: 100%;
     }
 }
