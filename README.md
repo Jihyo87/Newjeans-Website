@@ -44,7 +44,7 @@ How to Run Locally
 
 Clone the repo:
 
-git clone https://github.com/<your-username>/Newjeans-Website.git
+git clone https://github.com/Jihyo87/Newjeans-Website.git
 
 
 Open the folder.
